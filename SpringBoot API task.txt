@@ -1,0 +1,24 @@
+In this tutorial, we will learn how to build REST APIs for a Library Management System Project using Spring Boot, Spring Data JPA (Hibernate), and MySQL database.
+
+We'll create a simple version of the Library Management System with basic functionalities: 
+Create a new User
+Fetch all the Users
+Add new book
+Fetch all the books
+Fetch specific book
+Delete a book 
+Borrow a book 
+Return a book
+
+
+
+
+In this tutorial, we will learn how to build REST APIs for a simple Banking application using Spring Boot, Spring Data JPA (Hibernate) and MySQL database.
+
+We'll create a simple version of Banking App with basic functionalities: creating a bank account, fetching account details, and making a deposit/withdrawal.
+
+
+
+
+
+In this blog post, we will dive into the creation of a simple banking system in Java. This system will allow you to perform basic operations like creating, reading, updating, and deleting account holders. Furthermore, account holders will have the capacity to check their balance, view their transaction history, and make deposits and withdrawals.

@@ -1,0 +1,10 @@
+
+@Entity -> To create a Table automatically.
+@Id -> Primary key of the Tables.
+@Table -> Class Name and Table name different
+@Coloum -> Variable Name and Coloum Name different 
+@GeneratedValue(strategy = GenerationType.AUTO) -> Automatically generate id's	
+@OneToOne(cascade = CascadeType.ALL) -> Create a All CRUD operatio's
+@OneToMany(cascade = CascadeType.ALL) -> Create a All CRUD operatio's
+@ManyToOne(cascade = CascadeType.ALL) -> Create a All CRUD operatio's
+@ManyToMany(cascade = CascadeType.ALL) -> Create a All CRUD operatio's

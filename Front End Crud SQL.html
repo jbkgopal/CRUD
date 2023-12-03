@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<html>
+
+<head>
+<title>Html CRUD with Pure JavaScript</title>
+
+</head>
+
+<body>
+	<table>
+		<tr>
+			<td>
+				<form action="frontcrud" method="post">
+					<div>
+						<label>Name</label><input type="text" name="name">
+					</div>
+					<div>
+						<label>Email</label> <input type="text" name="email">
+					</div>
+					<div>
+						<label>Mobile</label> <input type="text" name="mobile">
+					</div>
+					<div>
+						<label>Message</label> <input type="text" name="message">
+					</div>
+						<input type="submit" value="Submit">
+				</form>
+			</td>
+			<td>
+				
+
+					<%
+					Class.forName("com.mysql.jdbc.Driver");
+					Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3737/tkagopal", "root", "root");
+					Statement s = c.createStatement();
+					ResultSet r = s.executeQuery("select * from contact");
+					%>
+
+					<table style="width: 90%">
+
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Mobile</th>
+							<th>Message</th>
+
+						</tr>
+
+						<%
+						while (r.next()) {
+							String name = r.getString(1);
+							String email = r.getString(2);
+							String mobile = r.getString(3);
+							String message = r.getString(4);
+							out.println("<tr><th>" + name + "</th><th>" + email + "</th><th>" + mobile + "</th><th>" + message + "</th></tr>");
+						}
+						%>
+
+					</table>
+			</td>
+		</tr>
+	</table>
+	
+</body>
+
+</html>
+
+
+<style>
+body>table {
+	width: 80%;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table.list {
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even), table.list thead>tr {
+	background-color: #dddddd;
+}
+
+input[type=text], input[type=number] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type=submit] {
+	width: 30%;
+	background-color: #ddd;
+	color: #000;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+form div.form-action-buttons {
+	text-align: right;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: underline;
+	color: #0000ee;
+	margin-right: 4px;
+}
+
+label.validation-error {
+	color: red;
+	margin-left: 5px;
+}
+
+.hide {
+	display: none;
+}
+</style>
+
+

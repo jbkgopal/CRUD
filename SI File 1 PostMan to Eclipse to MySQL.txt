@@ -1,0 +1,19 @@
+SI File 1 PostMan to Eclipse to MySQL
+
+************** DataBase Connection Codes **************
+
+spring.datasource.url = jdbc:mysql://localhost:3306/studentmanagement
+spring.datasource.username = root
+spring.datasource.password = root
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+spring.jpa.hibernate.ddl-auto = update
+spring.jackson.serialization.fail-on-empty-beans=false
+
+
+************** MySQL Dependancy 5.0 **************
+
+<dependency>
+<groupId>mysql</groupId>
+<artifactId>mysql-connector-java</artifactId>
+<version>5.1.6</version>
+</dependency>

@@ -1,0 +1,11 @@
+
+1.	Create database CRUD operation for any kind of 
+database management system like student admission, 
+e-commerce system, employee. 
+2.	Add/update/delete/view
+3.	Front end (PostMan, React js,Aangular js,Jsp,Html)
+4.	Backend database/API
+5.	Form validation is mandatory
+6	Exception Handling.
+7 .Use any relevant responsive CSS template
+NOTE: Changes must be reflected in DataBase.

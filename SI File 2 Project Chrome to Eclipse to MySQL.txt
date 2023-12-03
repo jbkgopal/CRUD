@@ -1,0 +1,45 @@
+SI File 2 Project Chrome to Eclipse to MySQL
+
+************* DataBase Connection Codes *************
+
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+spring.datasource.url = jdbc:mysql://localhost:3306/studentmanagement
+spring.datasource.username = root
+spring.datasource.password = root
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+## Hibernate Properties
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+# Hibernate ddl auto (create, create-drop, validate, update)
+spring.jpa.hibernate.ddl-auto = update
+spring.jackson.serialization.fail-on-empty-beans=false
+
+
+
+
+************* MySQL Dependancy 5.0 *************
+
+<dependency>
+<groupId>mysql</groupId>
+<artifactId>mysql-connector-java</artifactId>
+<version>5.1.6</version>
+</dependency>
+
+
+************* Front End *************
+
+Tomcat embed Jasper
+<!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper -->
+<dependency>
+    <groupId>org.apache.tomcat.embed</groupId>
+    <artifactId>tomcat-embed-jasper</artifactId>
+</dependency>
+
+spring.mvc.view.prefix=/WEB-INF/jsp/
+spring.mvc.view.suffix=.jsp
+
+
+************* <!-- Title Project--> *************
+<title>Gopal</title>
+   
+<!-- Favicon logo in Project-->
+<link rel="icon" href="img/g.jpg">
